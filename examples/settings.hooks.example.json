@@ -1,6 +1,8 @@
 {
   "_comment": "Example: register the pre-execution guard as a Claude Code PreToolUse hook. Merge the 'hooks' block into your own settings.json. Use an ABSOLUTE path to the script. The 'matcher' targets the Bash tool so the guard sees shell commands before they run.",
 
+  "_settings_location": "This block goes in your Claude Code settings.json — project-level at .claude/settings.json (committed) or .claude/settings.local.json (personal, git-ignored), or user-level at ~/.claude/settings.json. Project settings win. This example file itself is NOT loaded by Claude Code; it's a snippet to copy.",
+
   "hooks": {
     "PreToolUse": [
       {
@@ -16,7 +18,7 @@
   },
 
   "_windows_variant": {
-    "_comment": "On Windows / PowerShell, use the .ps1 instead:",
-    "command": "pwsh -File C:/absolute/path/to/your/project/guard/shell-guard.ps1"
+    "_comment": "On Windows / PowerShell, use the .ps1 instead. -ExecutionPolicy Bypass is required or PowerShell refuses to run the unsigned local script:",
+    "command": "pwsh -ExecutionPolicy Bypass -File C:/absolute/path/to/your/project/guard/shell-guard.ps1"
   }
 }

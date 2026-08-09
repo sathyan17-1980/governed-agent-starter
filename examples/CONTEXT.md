@@ -11,16 +11,14 @@
 4. **No secrets in code or logs.** Load secrets from the environment at runtime only. Never echo a key, even truncated, into a log or an artifact.
 
 ## Self-audit before any architectural change
-Any change to schema, data flow, interfaces, or control flow must be checked against this list *before* it's proposed:
+Any change to schema, data flow, interfaces, or control flow should be checked against a short, explicit list *before* it's proposed. Use these starter prompts (add your own):
 
-1. **Active vs deferred harm** — is something broken right now, or only in theory?
-2. **Data-flow trace** — where does this value end up downstream? Walk every consumer.
-3. **False positive / false negative** — for any rule or heuristic, what good input gets rejected? What bad input slips through?
-4. **Bypass paths** — what other code reaches this state without the protection?
-5. **Locale / accessibility** — does this assume one language, region, or input device?
-6. **Backward compatibility** — which existing callers break? Grep before claiming "safe."
-7. **Honesty** — does this hide a problem instead of fixing it?
-8. **Deferral integrity** — if you're filing something as later-work, confirm no live harm happens in the meantime.
+1. **Blast radius** — what's the worst thing this change can break, and is that bounded?
+2. **Downstream** — where does this value end up? Walk the consumers before you commit.
+3. **Backward compatibility** — which existing callers break? Check before claiming "safe."
+4. **Honesty** — does this fix the problem, or just hide it?
+
+> Keep this list short and specific to your domain. The point is that "did you think about X?" is a written, repeatable step — not that you copy someone else's list.
 
 ## How this file is enforced
 - Loaded into the agent's context at the start of every session.
