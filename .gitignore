@@ -1,0 +1,21 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.pem
+id_rsa*
+secrets/
+
+# Language build artifacts (add your own)
+__pycache__/
+*.py[cod]
+node_modules/
+dist/
+build/

@@ -1,0 +1,22 @@
+{
+  "_comment": "Example: register the pre-execution guard as a Claude Code PreToolUse hook. Merge the 'hooks' block into your own settings.json. Use an ABSOLUTE path to the script. The 'matcher' targets the Bash tool so the guard sees shell commands before they run.",
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /absolute/path/to/your/project/guard/shell-guard.sh"
+          }
+        ]
+      }
+    ]
+  },
+
+  "_windows_variant": {
+    "_comment": "On Windows / PowerShell, use the .ps1 instead:",
+    "command": "pwsh -File C:/absolute/path/to/your/project/guard/shell-guard.ps1"
+  }
+}
