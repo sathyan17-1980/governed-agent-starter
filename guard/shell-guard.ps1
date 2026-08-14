@@ -95,8 +95,8 @@ try {
         Block 'redirect overwriting an env/secret file'
     }
 
-    # --- NOT covered by default: DB drops, chmod -R, truncate. Add your own.
-    #     (Live-attendee companion ships a copy-paste cheat sheet for these.)
+    # --- NOT covered by default (add your own if these are your irreversibles):
+    #     DB drops, chmod -R, truncate. See guard/README.md for copy-paste rules.
 
     exit 0
 }
