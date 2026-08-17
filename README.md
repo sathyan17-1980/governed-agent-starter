@@ -50,7 +50,7 @@ The guard is a `PreToolUse` hook. Before your agent runs a shell command, the ho
 governed-agent-starter/
 ├── README.md                          # you are here
 ├── SKELETON-CHECKLIST.md              # the copy-able five-layer checklist
-├── LICENSE                            # MIT (fill in the copyright holder)
+├── LICENSE                            # source-available, no-resale (NOT MIT)
 ├── guard/
 │   ├── shell-guard.sh                 # pre-execution guard (bash)
 │   ├── shell-guard.ps1                # pre-execution guard (PowerShell)
@@ -69,4 +69,4 @@ This starter is the mechanism, not the whole method. If you want the full treatm
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE). Fill in the copyright holder before you publish.
+Source-available, **no-resale** — see [`LICENSE`](LICENSE). Use and modify it anywhere, including in your own commercial work; you just can't resell it or bundle it into a competing paid course or product.
