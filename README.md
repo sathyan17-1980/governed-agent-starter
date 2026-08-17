@@ -50,7 +50,7 @@ The guard is a `PreToolUse` hook. Before your agent runs a shell command, the ho
 governed-agent-starter/
 ├── README.md                          # you are here
 ├── SKELETON-CHECKLIST.md              # the copy-able five-layer checklist
-├── LICENSE                            # source-available, no-resale (NOT MIT)
+├── LICENSE                            # PolyForm Perimeter 1.0.0 + plain-English (NOT MIT)
 ├── guard/
 │   ├── shell-guard.sh                 # pre-execution guard (bash)
 │   ├── shell-guard.ps1                # pre-execution guard (PowerShell)
@@ -65,8 +65,8 @@ governed-agent-starter/
 
 ## Going further
 
-This starter is the mechanism, not the whole method. If you want the full treatment — how to govern agent **memory** so it won't overshare, and agent **output** so it won't ship junk, plus how these layers compose into a repeatable lifecycle — that's taught separately. See `<COURSE-OR-SERIES-LINK>` <!-- fill in before publishing -->.
+This starter is the mechanism, not the whole method. Governing agent **memory** so it won't overshare, agent **output** so it won't ship junk, and composing these layers into a repeatable lifecycle all go beyond this starter — more on that soon.
 
 ## License
 
-Source-available, **no-resale** — see [`LICENSE`](LICENSE). Use and modify it anywhere, including in your own commercial work; you just can't resell it or bundle it into a competing paid course or product.
+Licensed under the **PolyForm Perimeter License 1.0.0** (full legal text + a plain-English summary in [`LICENSE`](LICENSE)). Use and modify it anywhere, including your own commercial work — you just can't repackage it into a product that competes with it (e.g. reselling it, or bundling it into a paid course whose value comes substantially from this software).
